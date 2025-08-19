@@ -1,6 +1,7 @@
 import './button.css';
+import {NativeProps} from '@/utils/native-props';
 
-export interface ButtonProps {
+export interface ButtonProps extends NativeProps {
   /** Is this the principal call to action on the page? */
   primary?: boolean;
   /** What background color to use */

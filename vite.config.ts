@@ -15,13 +15,13 @@ export default defineConfig({
     tsconfigPath: 'tsconfig.build.json',
     outDir: './dist/es',
     entryRoot: './src',
-    exclude: ['node_modules', 'tests', 'vite.config.ts', 'main.tsx', 'App.tsx'],
+    exclude: ['node_modules', 'tests', 'vite.config.ts', 'main.tsx', 'App.tsx', 'src/stories/**'],
   }),
   dts({
     tsconfigPath: 'tsconfig.build.json',
     outDir: './dist/lib',
     entryRoot: './src',
-    exclude: ['node_modules', 'tests', 'vite.config.ts', 'main.tsx', 'App.tsx'],
+    exclude: ['node_modules', 'tests', 'vite.config.ts', 'main.tsx', 'App.tsx', 'src/stories/**'],
   })],
   resolve: {
     alias: {
@@ -40,7 +40,7 @@ export default defineConfig({
     },
     rollupOptions: {
       external: ['react', 'react-dom', 'react/jsx-runtime',
-        'react/jsx-dev-runtime'],
+        'react/jsx-dev-runtime', 'classnames'],
       output: [
         {
           // es 产物配置
@@ -70,7 +70,7 @@ export default defineConfig({
           globals: {
             'react': 'React',
             'react-dom': 'ReactDOM',
-            'react/jsx-runtime': 'jsxRuntime'
+            'react/jsx-runtime': 'jsxRuntime',
           }
         },
       ],
