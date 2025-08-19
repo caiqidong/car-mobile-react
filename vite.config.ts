@@ -23,6 +23,11 @@ export default defineConfig({
     entryRoot: './src',
     exclude: ['node_modules', 'tests', 'vite.config.ts', 'main.tsx', 'App.tsx'],
   })],
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, './src'),
+    },
+  },
   build: {
     minify: false,
     emptyOutDir: true,
