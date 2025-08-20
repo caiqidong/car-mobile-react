@@ -1,0 +1,32 @@
+.car-loading-icon {
+  --image-size: var(--car-loading-icon-image-size, 16px);
+}
+
+.car-loading-icon-image {
+  animation: car-loading-icon-spin 1.5s linear infinite;
+}
+
+@keyframes car-loading-icon-spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.car-loading-icon-small .car-loading-icon-image {
+  --image-size: 16px;
+  width: var(--image-size);
+  height: var(--image-size);
+}
+
+.car-loading-icon-medium .car-loading-icon-image {
+  --image-size: 24px;
+  width: var(--image-size);
+  height: var(--image-size);
+}
+
+.car-loading-icon-large .car-loading-icon-image {
+  --image-size: 32px;
+  width: var(--image-size);
+  height: var(--image-size);
+}
+

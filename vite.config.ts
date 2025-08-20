@@ -2,6 +2,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts'
+import svgr from 'vite-plugin-svgr';
 
 // https://vite.dev/config/
 import path, { resolve } from 'node:path';
@@ -11,7 +12,7 @@ const dirname = typeof __dirname !== 'undefined' ? __dirname : path.dirname(file
 
 // More info at: https://storybook.js.org/docs/next/writing-tests/integrations/vitest-addon
 export default defineConfig({
-  plugins: [react(), dts({
+  plugins: [react(), svgr({ include: "**/*.svg?react", }), dts({
     tsconfigPath: 'tsconfig.build.json',
     outDir: './dist/es',
     entryRoot: './src',
