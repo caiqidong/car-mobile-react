@@ -1,5 +1,8 @@
 .car-loading-icon {
   --image-size: var(--car-loading-icon-image-size, 16px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .car-loading-icon-image {
@@ -13,19 +16,19 @@
 }
 
 .car-loading-icon-small .car-loading-icon-image {
-  --image-size: 16px;
+  --image-size: 12px;
   width: var(--image-size);
   height: var(--image-size);
 }
 
 .car-loading-icon-medium .car-loading-icon-image {
-  --image-size: 24px;
+  --image-size: 20px;
   width: var(--image-size);
   height: var(--image-size);
 }
 
 .car-loading-icon-large .car-loading-icon-image {
-  --image-size: 32px;
+  --image-size: 28px;
   width: var(--image-size);
   height: var(--image-size);
 }

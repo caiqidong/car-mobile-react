@@ -1,0 +1,116 @@
+:root {
+  /* 圆角 */
+  --car-radius-s: 12px;
+  --car-radius-m: 20px;
+  --car-radius-l: 30px;
+  /* 字体 */
+  --car-font-size-1: 9px;
+  --car-font-size-2: 10px;
+  --car-font-size-3: 11px;
+  --car-font-size-4: 12px;
+  --car-font-size-5: 13px;
+  --car-font-size-6: 14px;
+  --car-font-size-7: 15px;
+  --car-font-size-8: 16px;
+  --car-font-size-9: 17px;
+  --car-font-size-10: 18px;
+  /* 颜色 */
+  --car-color-primary: #865cff;
+  --car-color-success: #02C875;
+  --car-color-warning: #FFAE54;
+  --car-color-danger: #FF335D;
+  --car-color-yellow: #FFF22F;
+  --car-color-orange: #FFAE54;
+  /* 通用组件边框颜色 */
+  --car-color-comp_bd: #F9F9F9;
+  /* 通用组件背景颜色 */
+  --car-color-comp_bg: #FFAE54;
+  --car-color-wathet: #e7f1ff;
+  --car-color-text: #222222;
+  --car-color-text-secondary: #666666;
+  --car-color-weak: #999999;
+  --car-color-light: #cccccc;
+  --car-color-border: #eeeeee;
+  --car-color-background: #ffffff;
+  --car-color-highlight: var(--car-color-danger);
+  --car-color-white: #ffffff;
+  --car-color-box: #f5f5f5;
+  --car-color-text-light-solid: var(--car-color-white);
+  --car-color-text-dark-solid: #000000;
+  --car-color-fill-content: var(--car-color-box);
+  --car-font-size-main: var(--car-font-size-5);
+  --car-font-family: -apple-system, blinkmacsystemfont, 'Helvetica Neue',
+    helvetica, segoe ui, arial, roboto, 'PingFang SC', 'miui',
+    'Hiragino Sans GB', 'Microsoft Yahei', sans-serif;
+  --car-border-color: var(--car-color-border);
+  /* button */
+  --car-button-border-radius: var(--car-radius-m);
+  --car-button-font-size: var(--car-font-size-main);
+  --car-button-padding: 8px 16px;
+  --car-button-height: auto;
+  --car-button-line-height: 1.5;
+  --car-button-background-color: var(--car-color-white);
+  --car-button-text-color: var(--car-color-text);
+  --car-button-border-color: transparent;
+}
+html[data-prefers-color-scheme='dark'] {
+  --car-color-primary: #3086ff;
+  --car-color-success: #34b368;
+  --car-color-warning: #ffa930;
+  --car-color-danger: #ff4a58;
+  --car-color-yellow: #ffa930;
+  --car-color-orange: #e65a2b;
+  --car-color-wathet: #0d2543;
+  --car-color-text: #e6e6e6;
+  --car-color-text-secondary: #b3b3b3;
+  --car-color-weak: #808080;
+  --car-color-light: #4d4d4d;
+  --car-color-border: #2b2b2b;
+  --car-color-box: #0a0a0a;
+  --car-color-background: #1a1a1a;
+  --car-color-background-body: var(--car-color-background);
+  --car-border-color: var(--car-color-border);
+}
+:root {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+html {
+  background-color: var(--car-color-background-body);
+}
+body {
+  color: var(--car-color-text);
+  font-size: var(--car-font-size-main);
+  font-family: var(--car-font-family);
+}
+a,
+button {
+  cursor: pointer;
+}
+a {
+  color: var(--car-color-primary);
+  transition: opacity ease-in-out 0.2s;
+}
+a:active {
+  opacity: 0.8;
+}
+.car-plain-anchor {
+  color: unset;
+  transition: none;
+}
+.car-plain-anchor:active {
+  opacity: unset;
+}
+body.car-overflow-hidden {
+  overflow: hidden !important;
+}
+div.car-px-tester {
+  --size: 1;
+  height: calc(var(--size) / 2 * 2px);
+  width: 0;
+  position: fixed;
+  left: -100vw;
+  top: -100vh;
+  -webkit-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}

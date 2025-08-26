@@ -48,7 +48,7 @@ export const Primary: Story = {
     description: "no data",
     image: Empty.Images.Empty,
     imageStyle: { width: 100, height: 100 },
-    children: <Button label="action" />,
+    children: <Button title="Button" mode="fill" fill="solid" size="mini" loading={true} />,
   },
 };
 

@@ -61,19 +61,20 @@ export default defineConfig({
           preserveModulesRoot: 'src',
           dir: './dist/lib',
         },
-        {
-          // umd 产物配置
-          format: 'umd',
-          entryFileNames: 'index.js',
-          exports: 'named',
-          name: 'car-mobile-react',
-          dir: './dist/umd',
-          globals: {
-            'react': 'React',
-            'react-dom': 'ReactDOM',
-            'react/jsx-runtime': 'jsxRuntime',
-          }
-        },
+        // {
+        //   // umd 产物配置
+        //   format: 'umd',
+        //   entryFileNames: 'index.js',
+        //   exports: 'named',
+        //   name: 'car-mobile-react',
+        //   dir: './dist/umd',
+        //   globals: {
+        //     'react': 'React',
+        //     'react-dom': 'ReactDOM',
+        //     'react/jsx-runtime': 'jsxRuntime',
+        //     'classnames': 'classNames'
+        //   }
+        // },
       ],
     },
   },

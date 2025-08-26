@@ -8,7 +8,7 @@ const classPrefix = "car-loading-icon";
 
 export interface LoadingIconProps extends NativeProps {
   /** 大小 */
-  size?: "small" | "medium" | "large";
+  size?: "mini" | "small" | "medium" | "large";
   /** 颜色 */
   color?: string;
   /** 图片样式 */
@@ -20,7 +20,7 @@ export interface LoadingIconProps extends NativeProps {
 /** 用于页面和区块的加载中状态。 */
 export const LoadingIcon = (props: LoadingIconProps) => {
   function renderImageNode() {
-    const { color } = props;
+    const { color='#FFFFFF' } = props;
     if (color === undefined) {
       return React.createElement("img", {
         className: `${classPrefix}-image`,
